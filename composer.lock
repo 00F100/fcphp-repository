@@ -4,8 +4,153 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ddfa6effdeb5576e56cc5129c5467dee",
-    "packages": [],
+    "content-hash": "8b8e9b829be78dcb83b97346bd8cec7f",
+    "packages": [
+        {
+            "name": "00f100/fcphp-cache",
+            "version": "0.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/00F100/fcphp-cache.git",
+                "reference": "2da9d80ba856e9c30d65ff9feec4c08a66c006f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/00F100/fcphp-cache/zipball/2da9d80ba856e9c30d65ff9feec4c08a66c006f5",
+                "reference": "2da9d80ba856e9c30d65ff9feec4c08a66c006f5",
+                "shasum": ""
+            },
+            "require": {
+                "00f100/fcphp-crypto": "0.*",
+                "00f100/fcphp-redis": "0.*",
+                "ext-redis": "*",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "00f100/phpdbug": "*",
+                "phpunit/phpunit": "6.*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "FcPhp\\Cache\\": "src/",
+                    "FcPhp\\Cache\\Test\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "João Moraes",
+                    "email": "joaomoraesbr@gmail.com",
+                    "homepage": "https://github.com/00f100"
+                }
+            ],
+            "description": "Cache Index for FcPhp",
+            "homepage": "https://github.com/00f100/fcphp-cache",
+            "keywords": [
+                "PHP7",
+                "cache",
+                "crypto",
+                "fcphp",
+                "php72",
+                "redis"
+            ],
+            "time": "2018-08-04T22:56:55+00:00"
+        },
+        {
+            "name": "00f100/fcphp-crypto",
+            "version": "0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/00F100/fcphp-crypto.git",
+                "reference": "f8d8d8c77a3aaeef8f58e691a96ee7d1d6f6fca0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/00F100/fcphp-crypto/zipball/f8d8d8c77a3aaeef8f58e691a96ee7d1d6f6fca0",
+                "reference": "f8d8d8c77a3aaeef8f58e691a96ee7d1d6f6fca0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-sodium": "*",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "00f100/phpdbug": "*",
+                "phpunit/phpunit": "6.*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "FcPhp\\Crypto\\": "src/",
+                    "FcPhp\\Crypto\\Test\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "João Moraes",
+                    "email": "joaomoraesbr@gmail.com",
+                    "homepage": "https://github.com/00f100"
+                }
+            ],
+            "description": "Crypto content for FcPhp",
+            "homepage": "https://github.com/00f100/fcphp-crypto",
+            "keywords": [
+                "content",
+                "crypto",
+                "fcphp",
+                "php"
+            ],
+            "time": "2018-08-04T18:54:53+00:00"
+        },
+        {
+            "name": "00f100/fcphp-redis",
+            "version": "0.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/00F100/fcphp-redis.git",
+                "reference": "7c7caf7f1fc987559b64aa001a75ac377121c0e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/00F100/fcphp-redis/zipball/7c7caf7f1fc987559b64aa001a75ac377121c0e7",
+                "reference": "7c7caf7f1fc987559b64aa001a75ac377121c0e7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-redis": "*",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "00f100/phpdbug": "*",
+                "phpunit/phpunit": "6.*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "FcPhp\\Redis\\": "src/",
+                    "FcPhp\\Redis\\Test\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "João Moraes",
+                    "email": "joaomoraesbr@gmail.com",
+                    "homepage": "https://github.com/00f100"
+                }
+            ],
+            "description": "Redis Database for FcPhp",
+            "homepage": "https://github.com/00f100/fcphp-redis",
+            "keywords": [
+                "PHP7",
+                "fcphp",
+                "redis"
+            ],
+            "time": "2018-08-04T15:51:49+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "00f100/phpdbug",
