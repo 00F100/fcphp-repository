@@ -1,0 +1,28 @@
+{
+    "name": "00f100/fcphp-repository",
+    "type": "package",
+    "version": "0.1.0",
+    "description": "Package to manipulate repositories",
+    "keywords": ["package", "manipulate", "repositories", "fcphp", "php7"],
+    "homepage": "https://github.com/00f100/fcphp-repository",
+    "authors": [
+        {
+            "name": "João Moraes",
+            "email": "joaomoraesbr@gmail.com",
+            "homepage": "https://github.com/00f100"
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "00f100/phpdbug": "*",
+        "phpunit/phpunit": "6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "FcPhp\\Repositories\\": "src/",
+            "FcPhp\\Repositories\\Test\\": "tests/"
+        }
+    }
+}
