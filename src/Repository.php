@@ -3,10 +3,13 @@
 namespace FcPhp\Repository
 {
     use Exception;
+    use FcPhp\Cache\Interfaces\ICache;
+    use FcPhp\Query\Interfaces\IQuery;
+    use FcPhp\Repository\Interfaces\IFactory;
     use FcPhp\Repository\Interfaces\IRepository;
+    use FcPhp\Datasource\Interfaces\IDatasource;
     use FcPhp\Repository\Exceptions\ConnectErrorException;
     use FcPhp\Repository\Exceptions\QueryErrorException;
-    use FcPhp\Cache\Interfaces\ICache;
 
     class Repository implements IRepository
     {
@@ -14,21 +17,22 @@ namespace FcPhp\Repository
         private $query;
         private $datasource;
         private $cache;
+        private $factory;
         private $callbackConnectError;
         private $callbackQueryError;
 
-        public function __construct($datasource, ICache $cache = null, object $callbackConnectError = null, object $callbackQueryError = null)
+        public function __construct(IDatasource $datasource, ICache $cache = null, IFactory $factory, object $callbackConnectError = null, object $callbackQueryError = null)
         {
             $this->datasource = $datasource;
             $this->cache = $cache;
+            $this->factory = $factory;
             $this->callbackConnectError = $callbackConnectError;
             $this->callbackQueryError = $callbackQueryError;
-        }cache
+        }
 
         public function execute($query) :array
         {
             try {
-                $hasException = false;
                 $data = [];
                 $this->datasource->connect();
 
@@ -67,8 +71,7 @@ namespace FcPhp\Repository
                     }
                 }
             } catch (Exception $e) {
-                $hasException = true;
-                $this->callbackQueryError($e, $query);
+                $this->callbackQueryError($query, $e);
                 throw new QueryErrorException();
             } finally {
                 $this->datasource->disconnect();
@@ -76,7 +79,12 @@ namespace FcPhp\Repository
             return $data;
         }
 
-        private function callbackQueryError($query, Exception $e)
+        public function getQuery()
+        {
+            return $this->factory->getQuery($this->datasource->getStrategy());
+        }
+
+        private function callbackQueryError(IQuery $query, Exception $e)
         {
             if(is_object($this->callbackQueryError)) {
                 $callbackQueryError = $this->callbackQueryError;
@@ -84,7 +92,7 @@ namespace FcPhp\Repository
             }
         }
 
-        private function callbackConnectError($query, Exception $e)
+        private function callbackConnectError(IQuery $query, Exception $e)
         {
             if(is_object($this->callbackConnectError)) {
                 $callbackConnectError = $this->callbackConnectError;

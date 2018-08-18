@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b8e9b829be78dcb83b97346bd8cec7f",
+    "content-hash": "a289c8b21754afd234f17560c3b89023",
     "packages": [
         {
             "name": "00f100/fcphp-cache",
@@ -103,6 +103,147 @@
                 "php"
             ],
             "time": "2018-08-04T18:54:53+00:00"
+        },
+        {
+            "name": "00f100/fcphp-datasource",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/00F100/fcphp-datasource.git",
+                "reference": "5355aa97902fb336bf591840e398d35103572d39"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/00F100/fcphp-datasource/zipball/5355aa97902fb336bf591840e398d35103572d39",
+                "reference": "5355aa97902fb336bf591840e398d35103572d39",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "00f100/phpdbug": "*",
+                "phpunit/phpunit": "6.*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "FcPhp\\Datasource\\": "src/",
+                    "FcPhp\\Datasource\\Test\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "João Moraes",
+                    "email": "joaomoraesbr@gmail.com",
+                    "homepage": "https://github.com/00f100"
+                }
+            ],
+            "description": "Package to manipulate datasource",
+            "homepage": "https://github.com/00f100/fcphp-datasource",
+            "keywords": [
+                "PHP7",
+                "datasource",
+                "fcphp",
+                "manipulate",
+                "package"
+            ],
+            "time": "2018-08-18T15:46:17+00:00"
+        },
+        {
+            "name": "00f100/fcphp-di",
+            "version": "0.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/00F100/fcphp-di.git",
+                "reference": "de5389b99df10158234006dd3340521dbb6aeffc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/00F100/fcphp-di/zipball/de5389b99df10158234006dd3340521dbb6aeffc",
+                "reference": "de5389b99df10158234006dd3340521dbb6aeffc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "00f100/phpdbug": "*",
+                "phpunit/phpunit": "6.*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "FcPhp\\Di\\": "src/",
+                    "FcPhp\\Di\\Test\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "João Moraes",
+                    "email": "joaomoraesbr@gmail.com",
+                    "homepage": "https://github.com/00f100"
+                }
+            ],
+            "description": "Dependency Injection for FcPHP",
+            "homepage": "https://github.com/00f100/fcphp-di",
+            "keywords": [
+                "dependency",
+                "di",
+                "fcphp",
+                "injection",
+                "php"
+            ],
+            "time": "2018-08-04T19:16:58+00:00"
+        },
+        {
+            "name": "00f100/fcphp-query",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/00F100/fcphp-query.git",
+                "reference": "f919dade6902784a5745e5854023f6cd8d9c3c48"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/00F100/fcphp-query/zipball/f919dade6902784a5745e5854023f6cd8d9c3c48",
+                "reference": "f919dade6902784a5745e5854023f6cd8d9c3c48",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "00f100/phpdbug": "*",
+                "phpunit/phpunit": "6.*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "FcPhp\\Query\\": "src/",
+                    "FcPhp\\Query\\Test\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "João Moraes",
+                    "email": "joaomoraesbr@gmail.com",
+                    "homepage": "https://github.com/00f100"
+                }
+            ],
+            "description": "Package to manipulate query",
+            "homepage": "https://github.com/00f100/fcphp-query",
+            "keywords": [
+                "PHP7",
+                "fcphp",
+                "manipulate",
+                "package",
+                "query"
+            ],
+            "time": "2018-08-18T15:37:26+00:00"
         },
         {
             "name": "00f100/fcphp-redis",
@@ -1654,7 +1795,10 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "00f100/fcphp-datasource": 20,
+        "00f100/fcphp-query": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
