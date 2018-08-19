@@ -16,7 +16,6 @@
         "php": ">=7.2",
         "00f100/fcphp-cache": "*",
         "00f100/fcphp-datasource": "dev-master",
-        "00f100/fcphp-query": "dev-master",
         "00f100/fcphp-di": "^0.3.1"
     },
     "require-dev": {

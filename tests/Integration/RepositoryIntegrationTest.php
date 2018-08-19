@@ -4,11 +4,11 @@
 use FcPhp\Repository\Repository;
 use PHPUnit\Framework\TestCase;
 use FcPhp\Datasource\Datasource;
-use FcPhp\Query\Interfaces\IQuery;
+use FcPhp\Datasource\Interfaces\IQuery;
 use FcPhp\Cache\Facades\CacheFacade;
 use FcPhp\Repository\Interfaces\IRepository;
 use FcPhp\Di\Facades\DiFacade;
-use FcPhp\Query\Query;
+use FcPhp\Datasource\Query;
 use FcPhp\Repository\Factories\Factory;
 
 class RepositoryIntegrationTest extends TestCase
@@ -50,6 +50,7 @@ class RepositoryIntegrationTest extends TestCase
     public function testSingleQueryNonCache()
     {
         $query = $this->instance->getQuery();
+        $query->select('*')->from('table');
         $datasource = new DatasourceTestRand();
         $instance = new Repository($datasource, $this->cache, $this->factory, $this->callbackConnectError, $this->callbackQueryError);
         $data = $instance->execute($query);
