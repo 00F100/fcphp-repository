@@ -65,4 +65,7 @@ $callbackError = function(IQuery $query, Exception $e) {
 };
 
 $instance = new ExampleRepository($datasource, $cache, $factory, $callbackError);
+
+// Query
+$query = $instance->getQuery();
 ```

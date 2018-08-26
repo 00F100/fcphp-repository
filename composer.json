@@ -27,5 +27,6 @@
             "FcPhp\\Repository\\": "src/",
             "FcPhp\\Repository\\Test\\": "tests/"
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
