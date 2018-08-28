@@ -1,16 +1,13 @@
 <?php
 
-// use Exception;
 use FcPhp\Datasource\Strategy;
 use FcPhp\Repository\Repository;
 use PHPUnit\Framework\TestCase;
 use FcPhp\Datasource\Datasource;
-// use FcPhp\Datasource\MySQL\MySQL;
 use FcPhp\Datasource\Interfaces\IQuery;
 use FcPhp\Cache\Facades\CacheFacade;
 use FcPhp\Repository\Interfaces\IRepository;
 use FcPhp\Di\Facades\DiFacade;
-// use FcPhp\Datasource\Query;
 use FcPhp\Datasource\Factories\Factory;
 
 class RepositoryIntegrationTest extends TestCase
